@@ -7,64 +7,63 @@ import javax.persistence.Id;
 public class Address {
 
     @Id
-    private String zipCode;
-    private String publicSpace;
-    private String complement;
-    private String district;
-    private String locality;
-
-    private String state;
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
     private String ibge;
     private String gia;
     private String ddd;
     private String siafi;
 
-    public String getZipCode() {
-        return zipCode;
+    public String getCep() {
+        return cep;
     }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
-    public String getPublicSpace() {
-        return publicSpace;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public void setPublicSpace(String publicSpace) {
-        this.publicSpace = publicSpace;
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
     }
 
-    public String getComplement() {
-        return complement;
+    public String getComplemento() {
+        return complemento;
     }
 
-    public void setComplement(String complement) {
-        this.complement = complement;
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
-    public String getDistrict() {
-        return district;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setDistrict(String district) {
-        this.district = district;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
-    public String getLocality() {
-        return locality;
+    public String getLocalidade() {
+        return localidade;
     }
 
-    public void setLocality(String locality) {
-        this.locality = locality;
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
     }
 
-    public String getState() {
-        return state;
+    public String getUf() {
+        return uf;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 
     public String getIbge() {
