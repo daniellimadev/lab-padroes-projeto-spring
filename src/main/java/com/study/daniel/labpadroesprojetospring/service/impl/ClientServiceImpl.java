@@ -76,13 +76,13 @@ public class ClientServiceImpl implements ClientService {
         // Check if the Customer Address already exists (by zip code).
         String cep = client.getAddress().getCep();
         Address endereco = addressRepository.findById(cep).orElseGet(() -> {
-            // Caso não exista, integrar com o ViaCEP e persistir o retorno.
+            // If it does not exist, integrate with ViaCEP and persist the return.
             Address novoEndereco = viaCepService.consultarCep(cep);
             addressRepository.save(novoEndereco);
             return novoEndereco;
         });
         client.setAddress(endereco);
-        // Inserir Cliente, vinculando o Endereco (novo ou existente).
+        // Insert Customer, linking the Address (new or existing).
         clientRepository.save(client);
     }
 
